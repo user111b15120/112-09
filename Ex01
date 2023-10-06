@@ -1,1 +1,19 @@
+class CRectangle{
+    int width;
+    int height;
+    public CRectangle(int w, int h){
+        width = w;
+        height = h;
+    }
+
+    public CRectangle(){
+        System.out.println("Constructor CRectangle() called");
+        width = 10;
+        height = 8;
+    }
+    }
+
+public class Ex01 {
+    
+}
 

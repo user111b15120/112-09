@@ -6,7 +6,7 @@ class CRectangle{
         height = h;
     }
 
-    public CRectangle(){
+    public CRectangle(){ //b答案
         System.out.println("Constructor CRectangle() called");
         width = 10;
         height = 8;
@@ -16,4 +16,22 @@ class CRectangle{
 public class Ex01 {
     
 }
+----------------------------------------------------------------------------------
+class CRectangle{
+    static int width;
+    int height;
+    
+    public CRectangle(){ //c答案
+        this(width = 10, width = 8);
+        System.out.println("Constructor CRectangle() called");
+    }
+    public CRectangle(int w, int h){
+        System.out.println("Constructor CRectangle(String,double) called");
+        width = w;
+        height = h;
+    }
+    }
 
+public class ex1 {
+    
+}

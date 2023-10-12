@@ -1,0 +1,33 @@
+class CCount {
+    private static int cnt = 0; // 類別變數，用來追蹤物件建立的個數
+
+    public CCount() {
+        cnt++; // 建立物件時，cnt+1
+    }
+
+    public static void setZero() {
+        cnt = 0; // 把cnt歸零，使用類別變數
+    }
+
+    public void setValue(int n) {
+        cnt = n; // 把cnt設為n，使用實例函數
+    }
+
+    public static int getCount() {
+        return cnt; // 取得cnt的值，使用類別函數
+    }
+}
+public class Ex05 {
+    public static void main(String[] args) {
+        CCount obj1 = new CCount();
+
+        System.out.println("目前 cnt 的值: " + CCount.getCount());
+
+        CCount.setZero(); // 歸零 cnt 的值，使用類別函數
+
+        System.out.println("目前 cnt 的值: " + CCount.getCount());
+
+        obj1.setValue(5); // 不正確的操作，使用實例函數設定 cnt 的值
+        System.out.println("目前 cnt 的值: " + CCount.getCount());
+    }
+}    
